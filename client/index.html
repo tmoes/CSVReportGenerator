@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>CSV Report Generator - Mini Apps 1: Challenge_2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+    <h1>CVS REPORT GENERATOR</h1>
+    <h2 class="title">Input Data</h2>
+
+    <form class="form">
+      <textarea class="text" rows="10" cols="100" accept=".json"></textarea><br>
+      <br>
+      <input class="submit" type="submit"></input>
+    </form>
+
+    <h2>-OR-</h2>
+
+    <form id="filePickerForm" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="file">Choose file to upload</label>
+        <input type="file" id="file" name="file" accept=".json" multiple>
+      </div>
+      <div>
+        <button class="filePickerSubmit" href="/">Submit</button>
+      </div>
+     </form>
+
+    <h2 class="title">Output Data</h2>
+    <form class="outputForm">
+      <textarea class="csv" rows="10" cols="100"></textarea>
+    </form>
+    <br><br>
+
+    <a href="/download_json" class="download_json" download>
+      Download current CSV report
+    </a>
+  </body>
+
+</html>
